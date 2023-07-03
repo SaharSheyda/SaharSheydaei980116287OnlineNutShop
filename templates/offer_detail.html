@@ -1,0 +1,38 @@
+{% extends 'offerBase.html' %}
+{% block content %}
+<head>
+    <style>
+        .offer_edit {
+            text-decoration: none;
+            color: #009933;
+        }
+    
+    
+        .offer_delete {
+            text-decoration: none;
+            color: #ff3300;
+        }
+    </style>
+</head>
+<div class="post-entry">
+<h2>عنوان شغلی: {{ offer.job_title }}</h2>
+<p>نام و نام خانوادگی: {{ offer.first_name }} {{ offer.last_name }}</p>
+<br>
+<p>سن: {{ offer.age }}</p>
+<br>
+<p>تعداد سال سابقه کار: {{ offer.Years_of_WorkExperience }}</p>
+<br>
+<p>تلفن همراه: {{ offer.phone_number }}</p>
+<br>
+<p>ایمیل: {{ offer.email }}</p>
+<br>
+<p>مهارت ها :{{ offer.skills }}</p>
+<br>
+<p>شغل های قبلی: {{ offer.previous_jobs }}</p>
+<br>
+<p>پروانه کسب: {{ offer.Parvane_Kasb }}</p>
+</div>
+
+<p><a href="{% url 'offer_edit' offer.pk %}" class="offer_edit"><b> به روزرسانی اطلاعات</b></a></p>
+<p><a href="{% url 'offer_delete' offer.pk %}" class="offer_delete"><b> حذف همکار </b></a></p>
+{% endblock content %}

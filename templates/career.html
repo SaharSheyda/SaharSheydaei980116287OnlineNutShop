@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/stylesCareer.css' %}" />
+  <title>فرصت های شغلی</title>
+  
+</head>
+
+<body>
+    <div class="intro">
+      <br><br><br><br>
+      <h1>فرصت های شغلی</h1>
+      <p>جهت همکاری با ما اطلاعات خود را وارد کنید</p>
+      <a href="{% url 'offer' %}"><button>همکاری با ما</button></a>
+    </div>
+</body>
+
+</html>
+
+{% endblock content %}

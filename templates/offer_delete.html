@@ -1,0 +1,31 @@
+
+{% block content %}
+<head>
+    <style>
+      body{
+        color: white;
+        background-color: #333
+      }
+
+        input[type=submit] {
+          background-color: #ff3300;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          float: left;
+        }
+        
+        input[type=submit]:hover {
+          background-color: #b30000;
+        }
+        </style>
+    </head>
+<h1>Delete Offer</h1>
+<form action="" method="post">{% csrf_token %}
+<p>Are you sure you want to delete <strong>"{{ offer.first_name }}&nbsp;{{ offer.last_name }}"</strong>?</p>
+<br>
+<input type="submit" value="Confirm">
+</form>
+{% endblock content %}

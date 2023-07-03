@@ -1,0 +1,9 @@
+{% extends 'offerBase.html' %}
+{% block content %}
+{% for offer in object_list %}
+<div class="post-entry">
+<h2><a href="{% url 'offer_detail' offer.pk %}">{{ offer.job_title }}</a></h2>
+<p>{{ offer.first_name }} {{ offer.last_name }}</p>
+</div>
+{% endfor %}
+{% endblock content %}

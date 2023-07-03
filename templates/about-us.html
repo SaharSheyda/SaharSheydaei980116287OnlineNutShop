@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static%}
+<head>
+    <link rel="stylesheet" href="{% static 'css/about-us.css' %}"/>
+</head>
+<section class="about-section">
+  <div class="about-container">
+    <h2>درباره ما</h2>
+    <p>فروشگاه آنلاین خشکبار ما با هدف ارائه خشکبارهای با کیفیت و تازه با بهترین قیمت به وجود آمده است. ما مفتخریم که محصولات خود را از بهترین تولیدکنندگان محلی و بین‌المللی انتخاب کرده‌ایم تا به شما ارائه دهیم.</p>
+    <p>تمامی خشکبارهای ما بدون هیچ گونه افزودنی‌های مصنوعی با کیفیت بالا و با رعایت شرایط بهداشتی بسته‌بندی شده و به شما ارائه می‌شوند. ما از فناوری روز دنیا استفاده کرده‌ایم تا محصولات خود را با کیفیت بالا و تازه به شما تحویل دهیم.</p>
+    <div class="team-section" align="center">
+      &nbsp;&nbsp;&nbsp;
+      <h3>تیم ما</h3>
+      <div class="team-member">
+        <img src={% static "../static/images/avatar1.jpg" %} alt="عکس کارمند اول">
+        <div class="member-info">
+          <h4>سارا رضایی</h4>
+          <p>مدیریت</p>
+        </div>
+      </div>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="team-member">
+        <img src={% static "../static/images/avatar2.jpg" %} alt="عکس کارمند دوم">
+        <div class="member-info">
+          <h4>سمانه اینانلو</h4>
+          <p>بازاریابی</p>
+        </div>
+      </div>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="team-member">
+        <img src={% static "../static/images/avatar3.jpg" %} alt="عکس کارمند سوم">
+        <div class="member-info">
+          <h4>سارا محمدی</h4>
+          <p>پشتیبانی مشتریان</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}

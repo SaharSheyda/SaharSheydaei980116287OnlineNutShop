@@ -1,0 +1,78 @@
+body {
+    font-family: sans-serif;
+    font-size: 18px;
+    background-image: url(../images/ajil-3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+    header {
+    margin-bottom: 2rem;
+    display: flex;
+    }
+    header h1 a {
+    color: rgba(255, 255, 0, 0.87);
+    text-decoration: none;
+    position: absolute;
+    top: 20px;
+    left: 600px;
+    }
+    .nav-left {
+    margin-right: auto;
+    }
+    .nav-right {
+        display: flex;
+    }
+    .post-entry {
+    position: relative;
+    top: 50px;
+    margin-bottom: 4rem;
+    margin-left: 1050px;
+    }
+    .post-entry h2 {
+    color: #009933;
+    margin: 1.5rem 0;
+    text-align: center;
+    }
+    .post-entry h2 a,
+    .post-entry h2 a:visited {
+    color: brown;
+    text-decoration: none;
+    }
+    .post-entry p {
+    margin: 0;
+    text-align: center;
+    font-weight: 400;
+    color:rgba(255, 255, 0, 0.87)
+    }
+    .post-entry h2 a:hover {
+        color: red;
+        }
+
+    .offer_new {
+        text-decoration: none;
+        color: red;
+        position: absolute;
+        top: 80px;
+        left: 740px;
+        font-size: 20px;
+    }
+    .offer{
+        text-decoration: none;
+        color: red;
+        position: absolute;
+        top: 80px;
+        left: 560px;
+        font-size: 20px;
+    }
+
+    .offer_edit {
+        text-decoration: none;
+        color: #009933;
+    }
+
+
+    .offer_delete {
+        text-decoration: none;
+        color: #ff3300;
+    }

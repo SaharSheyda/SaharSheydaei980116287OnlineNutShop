@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>عمده فروشی خشکبار شیدائی</title>
+
+    <!-- link for css sign in sign up button -->
+    <link rel="stylesheet" href="../static/css/SignUpLogin.css">
+
+      <!-- css for slider -->
+      <link rel="stylesheet" href="../static/css/swiper-bundle.min.css" />
+
+      <link rel="stylesheet" href="../static/css/slider.css" />
+     
+   </head>
+   <body>
+    <main>
+
+
+      <div class="content">
+        <section class="main swiper mySwiper">
+            <div class="wrapperr swiper-wrapper">
+              <div class="slide swiper-slide">
+                <img src={% static "../static/images/HomePage1.jpg"%} alt="" class="image" />
+                <div class="image-data">
+                  <span class="text">
+
+                  </span>
+                  <a href="{% url 'shop' %}" class="button">مشاهده محصولات</a>
+                </div>
+              </div>
+              <div class="slide swiper-slide">
+                <img src={% static "../static/images/HomePage2.jpg"%} alt="" class="image"  />
+                <div class="image-data">
+                  <span class="text">
+
+                  </span>
+                  <h2>
+
+                  </h2>
+                  <a href="{% url 'about-us' %}" class="button btn">درباره ما</a>
+                </div>
+              </div>
+              <div class="slide swiper-slide">
+                <img src={% static "../static/images/HomePage4.jpg"%} alt="" class="image" />
+                <div class="image-data">
+                  <span class="text">
+
+                  </span>
+                  <h2>
+
+                  </h2>
+                  <a href="{% url 'contact-us' %}" class="button butn">تماس با ما</a>
+                </div>
+              </div>
+            </div>
+      
+            <div class="swiper-button-next nav-btn"></div>
+            <div class="swiper-button-prev nav-btn"></div>
+            <div class="swiper-pagination"></div>
+          </section>
+
+           <!-- Swiper JS -->
+    <script src="../static/js/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+      </div>
+    </main>
+   </body>
+</html>
+{% endblock content %}

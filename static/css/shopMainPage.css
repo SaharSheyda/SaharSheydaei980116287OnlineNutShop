@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(14deg, rgba(2,0,36,1) 0%, rgba(179,0,255,1) 100%);
+}
+.row{
+    width: 100%;
+    height: auto;
+    float: left;
+    clear: both;
+    z-index: -10;
+}
+/* css for row 4 ==> middle gallery*/
+.middle-gallery-container{
+    width: 100%;
+    height: auto;
+    float: left;
+    position: relative;
+    top: 150px;
+    left: 0;
+    margin-bottom: 20px;
+}
+.middle-gallery-container > .middle-gallery{
+    width: 85%;
+    height: auto;
+    float: left;
+    position: relative;
+    top: 0;
+    left: 8.5%;
+}
+.middle-gallery-container > .middle-gallery > .gallery-col{
+    width: 14%;
+    height: 120px;
+    float: left;
+    position: relative;
+    margin-top: 14px;
+    margin-left: 1.5%;
+}
+.middle-gallery-container > .middle-gallery > .gallery-col > a > .img-box{
+    width: 100%;
+    height: 120px;
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.middle-gallery-container > .middle-gallery > .gallery-col > a> .box-1{
+    background: url(../images/AjilMakhlutAll.png) no-repeat left center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.middle-gallery-container > .middle-gallery > .gallery-col > a> .box-2{
+    background: url(../images/AnjirAll.png) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.middle-gallery-container > .middle-gallery > .gallery-col > a> .box-3{
+    background: url(../images/BadamAll.png) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.middle-gallery-container > .middle-gallery > .gallery-col > a> .box-4{
+    background: url(../images/BadamHendiAll.png) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.middle-gallery-container > .middle-gallery > .gallery-col > a> .box-5{
+    background: url(../images/BadamZaminiAll.png) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.middle-gallery-container > .middle-gallery > .gallery-col > a> .box-6{
+    background: url(../images/FandoghAll.png) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.middle-gallery-container > .middle-gallery > .gallery-col > a> .box-7{
+    background: url(../images/TokhmeAll.png) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.middle-gallery-container > .middle-gallery > .gallery-col > a> .box-8{
+    background: url(../images/KeshmeshAll.png) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.middle-gallery-container > .middle-gallery > .gallery-col > a> .box-9{
+    background: url(../images/GerduAll.png) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.middle-gallery-container > .middle-gallery > .gallery-col > a> .box-10{
+    background: url(../images/MiveKhoshkAll.png) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.middle-gallery-container > .middle-gallery > .gallery-col > a> .box-11{
+    background: url(../images/MavizAll.png) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.middle-gallery-container > .middle-gallery > .gallery-col > a> .box-12{
+    background: url(../images/PesteAll.png) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.middle-gallery-container > .middle-gallery > .gallery-col > a > .img-box > .img-glass{
+    width: 100%;
+    height: 100%;
+    float: left;
+    background-color: rgba(236, 245, 241, 0.39);
+    opacity: 0;
+    transition: 0.5s;
+}
+.middle-gallery-container > .middle-gallery > .gallery-col > a > .img-box:hover .img-glass{
+    opacity: 1;
+}

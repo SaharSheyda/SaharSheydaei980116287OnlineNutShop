@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static%}
+<head>
+    <link rel="stylesheet" href="{% static 'css/contact-us.css' %}"/>
+</head>
+<section class="contact-section">
+    <div class="contact-container">
+      <h2>تماس با ما</h2>
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="name">نام کاربری</label>
+          <input type="text" name="name" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">ایمیل</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">موضوع</label>
+          <input type="text" name="subject" id="subject" required>
+        </div>
+        <div class="form-group">
+          <label for="message">متن پیام</label>
+          <textarea name="message" id="message" rows="5" required></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit">ارسال</button>
+        </div>
+      </form>
+    </div>
+  </section>
+{% endblock content %}

@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/shopMainPage.css">
+    <title>عمده فروشی خشکبار شیدائی/فروشگاه</title>
+</head>
+<body dir='rtl'>
+    {% if user.is_authenticated %}
+        {% if user.is_superuser %}
+            <body direction='rtl'>
+                <br><br><br><br>
+            <h1 class="">به پنل ادمین خوش آمدید</h1>
+            <div class="">
+                <div class="">
+                    <div class="">
+                        <h2 class="">دسته بندی</h2>
+                        <p>مشاهده و ویرایش دسته بندی محصولات</p>
+                        <div class="">
+                        <a href="{% url 'classification' %}" class="">مشاهده</a>
+                    </div>
+                </div>
+          </div>
+          <div class="">
+            <div class="">
+              <h2 class="">محصولات</h2>
+              <p>مشاهده و ویرایش انواع محصولات</p>
+              <div class="">
+                <a href="{% url 'product' %}" class="">مشاهده</a>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <div class="">
+              <h2 class="">شهر ها</h2>
+              <p>مشاهده و ویرایش شهر ها</p>
+              <div class="">
+                <a href="{% url 'city' %}" class="">مشاهده</a>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <div class="">
+              <h2 class="">انبار ها</h2>
+              <p>مشاهده و ویرایش انبار ها</p>
+              <div class="">
+                <a href="{% url 'inventory' %}" class="">مشاهده</a>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <div class="">
+              <h2 class="">موجودی انبار ها</h2>
+              <p>مشاهده و ویرایش موجودی انبار ها</p>
+              <div class="">
+                <a href="{% url 'inventoryProduct' %}" class="">مشاهده</a>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <div class="">
+              <h2 class="">سفارش ها</h2>
+              <p>مشاهده و ویرایش سفارش کاربران</p>
+              <div class="">
+                <a href="{% url 'order' %}" class="">مشاهده</a>
+              </div>
+            </div>
+          </div>
+      </div>
+        {% else %}
+        <div class="row">
+            <div class="middle-gallery-container">
+                <div class="middle-gallery">
+
+                <div class="gallery-col">
+                    <a href="{% url 'ajilMakhloot' %}">
+                        <div class="img-box box-1" title="آجیل مخلوط">
+                            <div class="img-glass"></div>
+                        </div>
+                    </a>
+                </div>
+
+            <div class="gallery-col">
+                <a href="{% url 'ajilMakhloot' %}">
+                    <div class="img-box box-2" title="انجیر">
+                        <div class="img-glass"></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="gallery-col">
+                <a href="{% url 'ajilMakhloot' %}">
+                    <div class="img-box box-3" title="بادام درختی">
+                        <div class="img-glass"></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="gallery-col">
+                <a href="{% url 'ajilMakhloot' %}">
+                    <div class="img-box box-4" title="بادام هندی">
+                        <div class="img-glass"></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="gallery-col">
+                <a href="{% url 'ajilMakhloot' %}">
+                    <div class="img-box box-5" title="بادام زمینی">
+                        <div class="img-glass"></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="gallery-col">
+                <a href="{% url 'ajilMakhloot' %}">
+                    <div class="img-box box-6" title="فندق">
+                        <div class="img-glass"></div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        <div class="middle-gallery">
+
+            <div class="gallery-col">
+                <a href="{% url 'ajilMakhloot' %}">
+                    <div class="img-box box-7" title="تخمه">
+                        <div class="img-glass"></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="gallery-col">
+                <a href="{% url 'ajilMakhloot' %}">
+                    <div class="img-box box-8" title="کشمش">
+                        <div class="img-glass"></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="gallery-col">
+                <a href="{% url 'ajilMakhloot' %}">
+                    <div class="img-box box-9" title="گردو">
+                        <div class="img-glass"></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="gallery-col">
+                <a href="{% url 'ajilMakhloot' %}">
+                    <div class="img-box box-10" title="میوه خشک">
+                        <div class="img-glass"></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="gallery-col">
+                <a href="{% url 'ajilMakhloot' %}">
+                    <div class="img-box box-11" title="مویز">
+                        <div class="img-glass"></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="gallery-col">
+                <a href="{% url 'ajilMakhloot' %}">
+                    <div class="img-box box-12" title="پسته">
+                        <div class="img-glass"></div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+        {% endif %}
+    {% else %}
+    <script>
+        alert("لطفا ابتدا وارد حساب کاربری خود شوید")
+    </script>
+    {% endif %}
+</body>
+</html>
+{% endblock content %}

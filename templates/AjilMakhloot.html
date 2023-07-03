@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<br><br><br><br>
+<h1 class="">به فروشگاه خشکبار خوش آمدید!</h1>
+<div class="">
+  {% for product in object_list%}
+  <h1>{{ product.name }}</h2>
+  {% endfor%}
+  {% for p in object_list %}
+  <div class="">
+    <div class="">
+      <h2 class="">{{ p.name }}</h2>
+      <div class=""></div>
+      {% if p.quantity > 0 %}
+      <div class="">{{ p.name.price }} تومان</div>
+      {% else %}
+      <div class="">ناموجود</div>
+      {% endif %}
+      
+      <div class="">
+        
+        <a {% if p.quantity == 0 %} disabled {% endif %} href="{% url 'userOrder' p.pk %}" class="btn btn-primary w-full" >خرید</a>
+      </div>
+    </div>
+  </div>
+  
+  {% empty %}
+  <p>هیچ محصولی برای شهر شما یافت نشد.</p>
+  {% endfor %}
+  </div>
+  {% endblock content%}

@@ -1,0 +1,22 @@
+{% load static %}
+<html>
+<head>
+<title>فرصت های شغلی</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/styleOffer.css' %}" />
+</head>
+<body>
+<div>
+<header>
+<div class="nav-left">
+<h1><a href="{% url 'offer' %}">فرصت های شغلی</a></h1>
+</div>
+<div class="nav-right">
+<a href="{% url 'offer_new' %}" class="offer_new"><b>درخواست همکاری با ما</a>
+<a href="{% url 'offer' %}" class="offer"><b>همکاران بالقوه</a>
+</div>
+</header>
+{% block content %}
+{% endblock content %}
+</div>
+</body>
+</html>

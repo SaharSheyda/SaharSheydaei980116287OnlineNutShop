@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block content %}
+<br><br><br><br>
+{% if user.is_superuser %}
+<head>
+  <style>
+    .text-primary{
+      color: rgb(17, 0, 255);
+    }
+  </style>
+</head>
+    <h1 class="">به مدیریت عمده فروشی خشکبار خوش آمدید</h1>
+    <div class="">
+        <div class="">
+            <div class="">
+              <h2 class="">دسته بندی</h2>
+              <p>مشاهده و ویرایش دسته بندی محصولات</p>
+              <div class="">
+                <a href="{% url 'classification' %}" class="">مشاهده</a>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <div class="">
+              <h2 class="">محصولات</h2>
+              <p>مشاهده و ویرایش انواع محصولات</p>
+              <div class="">
+                <a href="{% url 'product' %}" class="">مشاهده</a>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <div class="">
+              <h2 class="">شهر ها</h2>
+              <p>مشاهده و ویرایش شهر ها</p>
+              <div class="">
+                <a href="{% url 'city' %}" class="">مشاهده</a>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <div class="">
+              <h2 class="">انبار ها</h2>
+              <p>مشاهده و ویرایش انبار ها</p>
+              <div class="">
+                <a href="{% url 'inventory' %}" class="">مشاهده</a>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <div class="">
+              <h2 class="">موجودی انبار ها</h2>
+              <p>مشاهده و ویرایش موجودی انبار ها</p>
+              <div class="">
+                <a href="{% url 'inventoryProduct' %}" class="">مشاهده</a>
+              </div>
+            </div>
+          </div>
+          <div class="l">
+            <div class="">
+              <h2 class="">سفارش ها</h2>
+              <p>مشاهده و ویرایش سفارش کاربران</p>
+              <div class="">
+                <a href="{% url 'order' %}" class="btn btn-primary">مشاهده</a>
+              </div>
+            </div>
+          </div>
+      </div>
+{% else %}
+<h1 class="">به فروشگاه خشکبار خوش آمدید!</h1>
+<span class = ''>لطفا از منو بخش مورد نظر خود را انتخاب نمائید</span>
+{% endif %}
+
+{% endblock content %}
+

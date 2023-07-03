@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block content %}
+<br><br><br><br>
+{% if user.is_superuser %}
+    <h1 class="">به پنل ادمین خوش آمدید</h1>
+    <div class="">
+        <div class="">
+            <div class="">
+              <h2 class="">دسته بندی</h2>
+              <p>مشاهده و ویرایش دسته بندی محصولات</p>
+              <div class="">
+                <a href="{% url 'classification' %}" class="">مشاهده</a>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <div class="">
+              <h2 class="">محصولات</h2>
+              <p>مشاهده و ویرایش انواع محصولات</p>
+              <div class="">
+                <a href="{% url 'product' %}" class="btn btn-primary">مشاهده</a>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <div class="">
+              <h2 class="">شهر ها</h2>
+              <p>مشاهده و ویرایش شهر ها</p>
+              <div class="">
+                <a href="{% url 'city' %}" class="btn btn-primary">مشاهده</a>
+              </div>
+            </div>
+          </div>
+          <div class="l">
+            <div class="">
+              <h2 class="">انبار ها</h2>
+              <p>مشاهده و ویرایش انبار ها</p>
+              <div class="">
+                <a href="{% url 'inventory' %}" class="">مشاهده</a>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <div class="">
+              <h2 class="">موجودی انبار ها</h2>
+              <p>مشاهده و ویرایش موجودی انبار ها</p>
+              <div class="">
+                <a href="{% url 'inventoryProduct' %}" class="">مشاهده</a>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <div class="">
+              <h2 class="">سفارش ها</h2>
+              <p>مشاهده و ویرایش سفارش کاربران</p>
+              <div class="">
+                <a href="{% url 'order' %}" class="">مشاهده</a>
+              </div>
+            </div>
+          </div>
+      </div>
+{% else %}
+<h1 class="">به فروشگاه خشکبار خوش آمدید!</h1>
+<div class="">
+  {% for p in object_list %}
+  <div class="">
+      <div class="">
+        <h2 class="card-title font-black text-3xl">{{ p.name }}</h2>
+        <div class="">هر {{p.name.quantity}} کیلوگرم</div>
+        {% if p.quantity > 0 %}
+        <div class="">{{ p.name.price }} تومان</div>
+        {% else %}
+        <div class="">ناموجود</div>
+        {% endif %}
+        
+        <div class="">
+          
+          <a {% if p.quantity == 0 %} disabled {% endif %} href="{% url 'userOrder' p.pk %}" class="btn btn-primary w-full" >خرید</a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+{% endif %}
+
+{% endblock content %}
